@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Model quotesql="1" tablecharset="" mysql_version="505" mssql_version="2005" derby_version="106" ingres_version="9">
+    <Entity name="comments" Unlogged="false" PKConstraintName="id" PKClustered="0">
+        <Column name="id">
+            <PrimaryKey>true</PrimaryKey>
+            <ForeignKey>false</ForeignKey>
+            <Type>9</Type>
+            <Length>11</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+        <Column name="usersid">
+            <PrimaryKey>false</PrimaryKey>
+            <ForeignKey>true</ForeignKey>
+            <ReferencedColumn>users.id</ReferencedColumn>
+            <Type>9</Type>
+            <Length>11</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+        <Column name="taskid">
+            <PrimaryKey>false</PrimaryKey>
+            <ForeignKey>true</ForeignKey>
+            <ReferencedColumn>task.id</ReferencedColumn>
+            <Type>9</Type>
+            <Length>11</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+        <Column name="comment">
+            <PrimaryKey>false</PrimaryKey>
+            <ForeignKey>false</ForeignKey>
+            <Type>27</Type>
+            <Length>500</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+    </Entity>
+    <Entity name="task" Unlogged="false" PKConstraintName="id" PKClustered="0">
+        <Column name="id">
+            <PrimaryKey>true</PrimaryKey>
+            <ForeignKey>false</ForeignKey>
+            <Type>9</Type>
+            <Length>11</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+        <Column name="usersid">
+            <PrimaryKey>false</PrimaryKey>
+            <ForeignKey>true</ForeignKey>
+            <ReferencedColumn>users.id</ReferencedColumn>
+            <Type>9</Type>
+            <Length>11</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+        <Column name="assignedTo">
+            <PrimaryKey>false</PrimaryKey>
+            <ForeignKey>false</ForeignKey>
+            <Type>9</Type>
+            <Length>11</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+        <Column name="title">
+            <PrimaryKey>false</PrimaryKey>
+            <ForeignKey>false</ForeignKey>
+            <Type>27</Type>
+            <Length>45</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+        <Column name="detail">
+            <PrimaryKey>false</PrimaryKey>
+            <ForeignKey>false</ForeignKey>
+            <Type>27</Type>
+            <Length>2000</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+        <Column name="status">
+            <PrimaryKey>false</PrimaryKey>
+            <ForeignKey>false</ForeignKey>
+            <Type>27</Type>
+            <Length>45</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+    </Entity>
+    <Entity name="users" Unlogged="false" PKConstraintName="id" PKClustered="0">
+        <Column name="id">
+            <PrimaryKey>true</PrimaryKey>
+            <ForeignKey>false</ForeignKey>
+            <Type>9</Type>
+            <Length>11</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+        <Column name="userName">
+            <PrimaryKey>false</PrimaryKey>
+            <ForeignKey>false</ForeignKey>
+            <Type>27</Type>
+            <Length>45</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+        <Column name="password">
+            <PrimaryKey>false</PrimaryKey>
+            <ForeignKey>false</ForeignKey>
+            <Type>27</Type>
+            <Length>300</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+        <Column name="firstName">
+            <PrimaryKey>false</PrimaryKey>
+            <ForeignKey>false</ForeignKey>
+            <Type>27</Type>
+            <Length>45</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+        <Column name="lastName">
+            <PrimaryKey>false</PrimaryKey>
+            <ForeignKey>false</ForeignKey>
+            <Type>27</Type>
+            <Length>45</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+        <Column name="enabled">
+            <PrimaryKey>false</PrimaryKey>
+            <ForeignKey>false</ForeignKey>
+            <Type>1</Type>
+            <Length>4</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+    </Entity>
+    <Entity name="role" Unlogged="false" PKConstraintName="id" PKClustered="0">
+        <Column name="id">
+            <PrimaryKey>true</PrimaryKey>
+            <ForeignKey>false</ForeignKey>
+            <Type>9</Type>
+            <Length>11</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+        <Column name="role">
+            <PrimaryKey>false</PrimaryKey>
+            <ForeignKey>false</ForeignKey>
+            <Type>27</Type>
+            <Length>45</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+    </Entity>
+    <Entity name="userRole" Unlogged="false" PKClustered="0">
+        <Column name="id">
+            <PrimaryKey>true</PrimaryKey>
+            <ForeignKey>false</ForeignKey>
+            <Type>9</Type>
+            <Length>11</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+        <Column name="usersid">
+            <PrimaryKey>false</PrimaryKey>
+            <ForeignKey>true</ForeignKey>
+            <ReferencedColumn>users.id</ReferencedColumn>
+            <Type>9</Type>
+            <Length>11</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+        <Column name="roleid">
+            <PrimaryKey>false</PrimaryKey>
+            <ForeignKey>true</ForeignKey>
+            <ReferencedColumn>role.id</ReferencedColumn>
+            <Type>9</Type>
+            <Length>11</Length>
+            <Nullable>false</Nullable>
+            <IDGenerator>native</IDGenerator>
+            <Unique>false</Unique>
+            <Index>false</Index>
+            <UserTypes/>
+        </Column>
+    </Entity>
+    <ForeignKey name="FKcomments947971">
+        <ReferenceTable>comments</ReferenceTable>
+        <ReferencedTable>users</ReferencedTable>
+        <Columns>
+            <Column>usersid</Column>
+        </Columns>
+        <RefColumns>
+            <Column>id</Column>
+        </RefColumns>
+    </ForeignKey>
+    <ForeignKey name="FKuserRole66183">
+        <ReferenceTable>userRole</ReferenceTable>
+        <ReferencedTable>users</ReferencedTable>
+        <Columns>
+            <Column>usersid</Column>
+        </Columns>
+        <RefColumns>
+            <Column>id</Column>
+        </RefColumns>
+    </ForeignKey>
+    <ForeignKey name="FKuserRole441121">
+        <ReferenceTable>userRole</ReferenceTable>
+        <ReferencedTable>role</ReferencedTable>
+        <Columns>
+            <Column>roleid</Column>
+        </Columns>
+        <RefColumns>
+            <Column>id</Column>
+        </RefColumns>
+    </ForeignKey>
+    <ForeignKey name="FKtask979092">
+        <ReferenceTable>task</ReferenceTable>
+        <ReferencedTable>users</ReferencedTable>
+        <Columns>
+            <Column>usersid</Column>
+        </Columns>
+        <RefColumns>
+            <Column>id</Column>
+        </RefColumns>
+    </ForeignKey>
+    <ForeignKey name="FKcomments733203">
+        <ReferenceTable>comments</ReferenceTable>
+        <ReferencedTable>task</ReferencedTable>
+        <Columns>
+            <Column>taskid</Column>
+        </Columns>
+        <RefColumns>
+            <Column>id</Column>
+        </RefColumns>
+    </ForeignKey>
+</Model>

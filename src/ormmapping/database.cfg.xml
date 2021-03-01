@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Database>
+    <Setting type="32">
+        <Driver></Driver>
+        <DriverFiles></DriverFiles>
+        <Dialect></Dialect>
+        <DriverClass></DriverClass>
+        <URL></URL>
+        <UserName></UserName>
+        <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
+        <HostName></HostName>
+        <PortNO></PortNO>
+        <DBName></DBName>
+        <ServiceName></ServiceName>
+        <ServerName></ServerName>
+        <SelectedForm>true</SelectedForm>
+    </Setting>
+    <Setting type="1048576">
+        <Driver>MySQL (Connector/J Driver)</Driver>
+        <DriverFiles>/Users/hughgriffith/Desktop/mysql-connector-java-8.0.22.jar</DriverFiles>
+        <Dialect>org.hibernate.dialect.MySQLInnoDBDialect</Dialect>
+        <DriverClass>com.mysql.cj.jdbc.Driver</DriverClass>
+        <URL>jdbc:mysql://localhost:3306/taskmanager</URL>
+        <UserName>root</UserName>
+        <EncryptedPassword>B7E761603B63173BC8D97F17B5F07ABC</EncryptedPassword>
+        <HostName>localhost</HostName>
+        <PortNO>3306</PortNO>
+        <DBName>taskmanager</DBName>
+        <ServiceName></ServiceName>
+        <ServerName></ServerName>
+        <SelectedForm>true</SelectedForm>
+    </Setting>
+</Database>
